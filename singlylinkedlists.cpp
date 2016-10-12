@@ -159,6 +159,20 @@ void reverse(){
 	}
 	head = current;
 }
+void rotate(int k ){
+	
+	for(int i = 0; i < k; i++){
+	Node*t = tail();
+	
+	Node*temp1 = head;
+	while(temp1 -> next -> next != NULL){
+		temp1 = temp1 -> next;
+	}
+	t -> next = head;
+	temp1 -> next = NULL;
+	head = t;
+}
+}
 
 
 void printlist(){
